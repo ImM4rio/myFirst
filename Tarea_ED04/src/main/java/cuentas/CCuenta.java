@@ -1,5 +1,9 @@
 package cuentas;
 
+/**
+ *
+ * @author Mario
+ */
 public class CCuenta {
 
 
@@ -8,10 +12,20 @@ public class CCuenta {
     private double saldo;
     private double tipoInterés;
 
+    /**Metodo constructor vacio
+     *
+     */
     public CCuenta()
     {
     }
-
+    
+    /**
+     * Metodo constructor de la clase CCuenta.
+     * @param nom
+     * @param cue
+     * @param sal
+     * @param tipo 
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -19,11 +33,20 @@ public class CCuenta {
         saldo=sal;
     }
 
+    /**Metodo para recuperar el saldo
+     *
+     * @return
+     */
     public double estado()
     {
         return getSaldo();
     }
 
+    /**Metodo que añade una cantidad
+     *
+     * @param cantidad
+     * @throws Exception
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -31,6 +54,11 @@ public class CCuenta {
         setSaldo(getSaldo() + cantidad);
     }
 
+    /**Metodo para retirar una cantidad
+     *
+     * @param cantidad
+     * @throws Exception
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
